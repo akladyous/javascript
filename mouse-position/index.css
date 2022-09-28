@@ -1,0 +1,14 @@
+body {
+    height: 100vh;
+    margin: 0;
+    top: 0;
+    left: 0;
+}
+body::after {
+    content: ' ';
+    position: absolute;
+    background:rgb(212, 211, 132);
+    height: var(--y);
+    width: var(--x);
+    transition: 1s;
+}
