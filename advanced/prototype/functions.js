@@ -1,3 +1,15 @@
+console.log('-------------------------- FUNCTION CONSTRUCTOR --------------------------')
+function Person(firstName, lastName) {
+    console.log('When function constructor is invoched, it creates a new empty object with the name as the function name ')
+    console.log('this : ', this, 'is the Object have been created')
+    console.log("function constructor bind properties defined inside the function with 'this' keyword to the new created object")
+    this.firstName = firstName
+    this.lastName = lastName
+    // in case of unimplicit return statement the function constructor return the newly created object
+}
+let jane = new Person('Jane', 'Doe')
+console.log('jane : ', jane)
+console.log('\n\n')
 console.log('-------------------------- FUNCTIONS --------------------------')
 function User(name, age, status) {
     this.name = name;
