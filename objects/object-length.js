@@ -5,9 +5,10 @@ let lista = {
 }
 
 
-Object.prototype.getLength = function() {
-   return Object.keys(this).length;}
+Object.prototype.getLength = function () {
+    return Object.keys(this).length;
+}
 
 Object.defineProperty(Object.prototype, 'length', {
-    get: function(){return Object.keys(this).length}
+    get: function () { return Object.keys(this).length }
 })
