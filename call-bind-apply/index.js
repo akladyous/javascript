@@ -21,3 +21,8 @@ logName.call(person, 'it', 'en')
 logName.apply(person, ['xx', 'yy'])
 console.log(person.getFullName.call(person2));
 // function curring
+function multiply(a, b) {
+    return a * b
+};
+const multyplyByTwo = multiply.bind(this, 2);
+console.log(multyplyByTwo(4))
