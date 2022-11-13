@@ -19,5 +19,5 @@ function counter() {
 const counter3 = counter();
 counter3.increment();
 counter3.increment(3);
-counter3.decrement(3);
+counter3.decrement(-3);
 console.log(counter3.getValue());
