@@ -1,14 +1,24 @@
 const person = {
-    first_name: 'john',
-    last_name: 'doe',
+    firstName: 'john',
+    lastName: 'doe',
     getFullName: function () {
-        let fullName = this.first_name + ' ' + this.last_name;
+        let fullName = this.firstName + ' ' + this.lastName;
         return fullName;
     }
 };
+const person2 = {
+    firstName: 'Alex',
+    lastName: 'Doe'
+}
 
 const logName = function (lang1, lang2) {
     console.log('logged : ', this.getFullName());
+    console.log('arguments : ', lang1, lang2)
 };
 var logPersonName = logName.bind(person);
-logPersonName();
+logPersonName('en', 'it');
+
+logName.call(person, 'it', 'en')
+logName.apply(person, ['xx', 'yy'])
+
+console.log(person.getFullName.call(person2));
