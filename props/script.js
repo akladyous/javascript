@@ -12,9 +12,8 @@ const userData = {
             validation: {},
         },
     },
-    get [prop = 'email']() {
-        debugger
-        console.log('prop: ', prop)
+    get [prop]() {
+        console.log(this.columns.prop)
     }
 }
 var x = userData.columns
