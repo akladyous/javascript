@@ -10,9 +10,9 @@ const profile = {
   },
 };
 if (Object.isExtensible(person)) {
-  Object.setPrototypeOf(profile, person);
+  Object.setPrototypeOf(profile.pro, person);
 }
-Object.setPrototypeOf(profile, person);
+// Object.setPrototypeOf(profile, person);
 console.log('person                                    : ', person);
 console.log('profile                                   : ', profile);
 console.log('-----------------------------------');
