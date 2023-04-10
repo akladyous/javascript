@@ -27,15 +27,12 @@ function a() {
   b();
   console.log('a again');
 }
-
 function b() {
   console.log('b');
   c();
   console.log('b again');
 }
-
 function c() {
   console.log('c');
 }
-
 a();
