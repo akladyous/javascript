@@ -1,6 +1,7 @@
 console.log('---------------- OBJECTS ----------------');
 const person = {
-  name: 'david',
+  firstName: 'john',
+  lastName: 'doe',
 };
 const profile = {
   email: 'alex@google.com',
@@ -9,14 +10,14 @@ const profile = {
     console.log(this.name);
   },
 };
-if (Object.isExtensible(person)) {
-  Object.setPrototypeOf(profile.pro, person);
-}
-// Object.setPrototypeOf(profile, person);
-console.log('person                                    : ', person);
-console.log('profile                                   : ', profile);
-console.log('-----------------------------------');
-console.log('profile.firstName : ', profile.name);
+// if (Object.isExtensible(person)) {
+//   Object.setPrototypeOf(profile, person);
+// }
+Object.setPrototypeOf(profile, person);
+
+console.log('person object  : ', person);
+console.log('profile object : ', profile);
+console.log('profile.firstName : ', profile.firstName);
 console.log('getPrototypeOf(profile)            : ', Object.getPrototypeOf(profile));
 console.log('profile.__proto__)                        : ', profile.__proto__);
 console.log('person.isPrototypeOf(profile)             : ', person.isPrototypeOf(profile));
