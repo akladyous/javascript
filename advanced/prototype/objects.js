@@ -19,6 +19,7 @@ console.log('person object  : ', person);
 console.log('profile object : ', profile);
 console.log('profile.firstName : ', profile.firstName);
 console.log('getPrototypeOf(profile)            : ', Object.getPrototypeOf(profile));
+console.log('getPrototypeOf(person)            : ', Object.getPrototypeOf(person));
 console.log('profile.__proto__)                        : ', profile.__proto__);
 console.log('person.isPrototypeOf(profile)             : ', person.isPrototypeOf(profile));
 console.log(
