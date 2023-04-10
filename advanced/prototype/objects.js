@@ -1,5 +1,5 @@
 console.log('---------------- OBJECTS ----------------');
-const person = {
+const user = {
   firstName: 'john',
   lastName: 'doe',
 };
@@ -10,22 +10,21 @@ const profile = {
     console.log(this.name);
   },
 };
-// if (Object.isExtensible(person)) {
-//   Object.setPrototypeOf(profile, person);
+// if (Object.isExtensible(user)) {
+//   Object.setPrototypeOf(profile, user);
 // }
-Object.setPrototypeOf(profile, person);
+Object.setPrototypeOf(profile, user);
 
-console.log('person object  : ', person);
+console.log('user object  : ', user);
 console.log('profile object : ', profile);
 console.log('profile.firstName : ', profile.firstName);
 console.log('getPrototypeOf(profile)            : ', Object.getPrototypeOf(profile));
-console.log('getPrototypeOf(person)            : ', Object.getPrototypeOf(person));
-console.log('profile.__proto__)                        : ', profile.__proto__);
-console.log('person.isPrototypeOf(profile)             : ', person.isPrototypeOf(profile));
-console.log(
-  'Object.getOwnPropertyDescriptors(profile) : ',
-  Object.getOwnPropertyDescriptors(profile)
-);
+console.log('profile.__proto__)                 : ', profile.__proto__);
+console.log('getPrototypeOf(user)             : ', Object.getPrototypeOf(user));
+console.log('user.__proto__)                  : ', user.__proto__);
+console.log('user.isPrototypeOf(profile)      : ', user.isPrototypeOf(profile));
+console.log('getOwnPropertyDescriptors(profile) : ', Object.getOwnPropertyDescriptors(profile));
+console.log('getOwnPropertyDescriptors(user) : ', Object.getOwnPropertyDescriptors(user));
 console.log('getOwnPropertyNames(profile)       : ', Object.getOwnPropertyNames(profile));
 console.log('-----------------------------------');
 const o = Object.create(null);
