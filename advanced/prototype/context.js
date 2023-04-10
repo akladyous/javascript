@@ -22,14 +22,20 @@ function foo() {
 }
 foo();
 //
-var globalVariable;
 function a() {
-  globalVariable = 'function a';
-  console.log('first function in the stack - before : ', globalVariable);
+  console.log('a');
   b();
-  console.log('first function in the stack - after  : ', globalVariable);
+  console.log('a again');
 }
+
 function b() {
-  globalVariable = 'function b';
+  console.log('b');
+  c();
+  console.log('b again');
 }
+
+function c() {
+  console.log('c');
+}
+
 a();
