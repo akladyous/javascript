@@ -18,7 +18,7 @@ console.log('getPrototypeOf(profile)            : ', Object.getPrototypeOf(profi
 console.log('profile.__proto__)                        : ', profile.__proto__);
 console.log('person.isPrototypeOf(profile)             : ', person.isPrototypeOf(profile));
 console.log('Object.getOwnPropertyDescriptors(profile) : ', Object.getOwnPropertyDescriptors(profile));
-console.log('Object.getOwnPropertyNames(profile)       : ', Object.getOwnPropertyNames(profile));
+console.log('getOwnPropertyNames(profile)       : ', Object.getOwnPropertyNames(profile));
 console.log('-----------------------------------');
 const o = Object.create(null);
 console.log('const o = Object.create(null)             : ', o, ' create an object null as prototype');
