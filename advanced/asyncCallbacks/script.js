@@ -1,8 +1,10 @@
 console.log('--- start ---');
 function wait5Seconds() {
-  var fiveSeconds = 10000 + new Date().getTime();
+  var startTime = new Date().getTime(); // Get the current time in milliseconds
+  var endTime = startTime + 500; // Add 5 seconds to the start time
 
-  while (new Date() < fiveSeconds) {
+  while (new Date().getTime() < endTime) {
+    // Your code to be executed while the current time is less than the end time
     console.log('5 seconds not finished yet...');
   }
   console.log('5 second finished');
