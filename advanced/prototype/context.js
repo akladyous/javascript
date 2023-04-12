@@ -10,7 +10,7 @@ if (typeof letVariable !== undefined || letVariable !== null) {
 
 function foo() {
   console.group('outer function executed');
-
+  console.log('this : ', this);
   var x = 1;
   function bar() {
     console.log('inner function - this : ', this);
