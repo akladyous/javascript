@@ -12,12 +12,13 @@ function foo() {
   console.group('outer function executed');
   console.log('this : ', this);
   var x = 1;
-  console.log('value of x : ', x);
+  console.log('declared variable "x" : ', x);
   function bar() {
     console.group('inner function');
     console.log('this : ', this);
     var y = 2;
-    console.log('value of x : ', x);
+    console.log('declared variable "y" : ', y);
+    console.log('access varibale "x" from outer function x : ', x);
     console.log('value of y : ', y);
   }
   bar();
