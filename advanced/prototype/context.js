@@ -12,11 +12,13 @@ function foo() {
   console.group('outer function executed');
   console.log('this : ', this);
   var x = 1;
+  console.log('value of x : ', x);
   function bar() {
-    console.log('inner function - this : ', this);
+    console.group('inner function');
+    console.log('this : ', this);
     var y = 2;
-    console.log('inside inner function - x : ', x);
-    console.log('inside inner function - y : ', y);
+    console.log('value of x : ', x);
+    console.log('value of y : ', y);
   }
   bar();
   console.log('inside outer function - : x ', x);
