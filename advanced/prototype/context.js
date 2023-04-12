@@ -26,7 +26,7 @@ function foo() {
   // console.log('inside outer function - : y ', y);
 }
 foo();
-
+console.log('--------------- execution stack ---------------');
 function a() {
   console.log('a');
   b();
