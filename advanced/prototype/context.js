@@ -1,14 +1,16 @@
+console.log('-------------- execution context --------------');
 {
   let letVariable = 'let : varibale inside block';
   var varVariable = 'var : varibale inside block';
 }
 if (typeof letVariable !== undefined || letVariable !== null) {
+  console.log(varVariable);
 }
-console.log(varVariable);
 //
-console.log('execution context');
+
 function foo() {
-  console.log('outer function - this : ', this);
+  console.group('outer function executed');
+
   var x = 1;
   function bar() {
     console.log('inner function - this : ', this);
@@ -22,17 +24,3 @@ function foo() {
 }
 foo();
 //
-function a() {
-  console.log('a');
-  b();
-  console.log('a again');
-}
-function b() {
-  console.log('b');
-  c();
-  console.log('b again');
-}
-function c() {
-  console.log('c');
-}
-a();
