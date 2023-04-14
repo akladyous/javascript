@@ -1,3 +1,5 @@
+console.log('-------------- creating objects --------------');
+
 console.log('---------------- OBJECTS ----------------');
 const user = {
   firstName: 'john',
@@ -17,11 +19,12 @@ console.log('setPrototypeOf(user, profile) -> add profile to user.__proto__');
 Object.setPrototypeOf(user, profile);
 console.log('user object  : ', user);
 console.log('user.email : ', user.email, ' still have access to user.__proto__');
-console.log('getPrototypeOf(profile)            : ', Object.getPrototypeOf(profile));
+console.log('getPrototypeOf(user)            : ', Object.getPrototypeOf(user));
 console.log('profile.__proto__)                 : ', profile.__proto__);
 console.log('getPrototypeOf(user)             : ', Object.getPrototypeOf(user));
 console.log('user.__proto__)                  : ', user.__proto__);
-console.log('user.isPrototypeOf(profile)      : ', user.isPrototypeOf(profile));
+console.log('profile.isPrototypeOf(user)      : ', profile.isPrototypeOf(user));
+console.log('-------------- access object property --------------');
 console.log('getOwnPropertyDescriptors(profile) : ', Object.getOwnPropertyDescriptors(profile));
 console.log('getOwnPropertyDescriptors(user) : ', Object.getOwnPropertyDescriptors(user));
 console.log('getOwnPropertyNames(profile)       : ', Object.getOwnPropertyNames(profile));
