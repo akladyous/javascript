@@ -42,3 +42,12 @@ console.log(
   o,
   ' is equivalent to ->  const obj1 = {}'
 );
+var v1 = 'v1';
+const o1 = {
+  v1: v1,
+  property() {
+    console.log('hello');
+  },
+};
+
+console.log('prototypeOf o1 : ', Object.getPrototypeOf(o1));
