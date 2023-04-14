@@ -1,7 +1,9 @@
 class User {
+  static #_count = 0;
   constructor(userName, password) {
     this.userName = userName;
     this.password = password;
+    User.#_count++;
   }
   get getPassword() {
     return this.password;
@@ -13,11 +15,15 @@ class User {
     this.password = newPassword;
   }
 
-  static minimumPasswordLength = 6;
+  static minimumPasswordLength;
 
-  #description = 'User Class';
-  get description() {
-    return this.#description;
+  static {
+    this.minimumPasswordLength = 6;
+    console.log('inside static block');
+  }
+
+  static getCount() {
+    return User.#_count;
   }
 }
 
@@ -28,5 +34,8 @@ class Profile extends User {
   }
 }
 
-var alex = new User('alex', '1234');
+var alex = new User('Alex', '1234');
+var mary = new User('Mary', '4321');
 console.log(alex);
+console.log(mary);
+console.log(User.get);
