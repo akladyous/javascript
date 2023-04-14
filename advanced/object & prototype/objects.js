@@ -13,11 +13,10 @@ const profile = {
 // if (Object.isExtensible(user)) {
 //   Object.setPrototypeOf(profile, user);
 // }
-Object.setPrototypeOf(profile, user);
-
+console.log('setPrototypeOf(user, profile) -> add profile to user.__proto__');
+Object.setPrototypeOf(user, profile);
 console.log('user object  : ', user);
-console.log('profile object : ', profile);
-console.log('profile.firstName : ', profile.firstName);
+console.log('user.email : ', user.email, ' still have access to user.__proto__');
 console.log('getPrototypeOf(profile)            : ', Object.getPrototypeOf(profile));
 console.log('profile.__proto__)                 : ', profile.__proto__);
 console.log('getPrototypeOf(user)             : ', Object.getPrototypeOf(user));
