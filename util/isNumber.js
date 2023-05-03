@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 function isNumber(num) {
   debugger;
   if (typeof num === 'number') {
