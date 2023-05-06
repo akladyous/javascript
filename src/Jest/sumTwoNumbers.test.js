@@ -1,4 +1,3 @@
-// const sumTwoNumbers = require('./sumTwoNumbers');
 import { describe, expect, it } from '@jest/globals';
 import { sumTwoNumbers } from './sumTwoNumbers';
 
