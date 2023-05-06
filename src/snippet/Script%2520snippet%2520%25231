@@ -1,0 +1,9 @@
+function isNumerc(...args) {
+    debugger
+    // let ar1 = [];
+    // args.forEach(v=> v)
+    console.log(this)
+    return /^-?\d+$/.test(this)
+};
+
+isNumerc.apply([1,2,3])
