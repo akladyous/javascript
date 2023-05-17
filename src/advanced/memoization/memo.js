@@ -21,3 +21,8 @@ const computionalMathFunc = (num) => {
 console.time('2000_000_000 times');
 console.log(computionalMathFunc(2000000000));
 console.timeEnd('2000_000_000 times');
+console.log('-'.repeat(50));
+console.time('2000_000_000 times');
+const useMemo = memo(computionalMathFunc);
+console.log(useMemo(2000000000));
+console.timeEnd('2000_000_000 times');
