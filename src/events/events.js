@@ -1,9 +1,5 @@
-const mainSection = document.querySelector('.main');
+const sec = document.querySelector('.mainSection');
 
 const myEvent = new Event('myCustomEvent');
 
-mainSection.addEventListener('myCustomEvent', (e) => {
-  console.log(e);
-});
-
-document.dispatchEvent(myEvent);
+sec.addEventListener('click', (e) => console.log('click event..'));
