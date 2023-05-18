@@ -8,8 +8,14 @@
 .one {
   height: 300px;
   width: 300px;
+  border: 1px solid blue;
+  padding: 5px;
+  margin-block: 5px;
 }
 .two {
   height: 300px;
   width: 300px;
+  border: 1px solid blue;
+  padding: 5px;
+  margin-block: 5px;
 }
