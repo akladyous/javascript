@@ -1,5 +1,9 @@
-const sec = document.querySelector('.mainSection');
+const docEvent = new Event('myCustomEvent', {
+  bubbles: true,
+  cancelable: true,
+});
+document.addEventListener('myCustomEvent', (e) => {
+  console.log('event : ', e);
+});
 
-const myEvent = new Event('myCustomEvent');
-
-sec.addEventListener('click', (e) => console.log('click event..'));
+document.dispatchEvent(docEvent);
