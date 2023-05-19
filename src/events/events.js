@@ -1,9 +1,16 @@
 const docEvent = new Event('myCustomEvent', {
-  bubbles: true,
   cancelable: true,
-});
-document.addEventListener('myCustomEvent', (e) => {
-  console.log('event : ', e);
+  bubbles: true,
 });
 
-document.dispatchEvent(docEvent);
+document.addEventListener('myCustomEvent', (e) => {
+  console.log('doc event  : ', e.defaultPrevented);
+});
+
+const btn = document.querySelector('.btn');
+btn.addEventListener('myCustomEvent', (e) => {
+  e.preventDefault();
+  console.log('btn  event : ', e.defaultPrevented);
+});
+
+btn.dispatchEvent(docEvent);
