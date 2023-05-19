@@ -16,17 +16,21 @@ btn.addEventListener('app:click', (e) => {
 });
 
 let lastClickElapsedTime = 0;
-btn.addEventListener('click', (e) => {
-  debugger;
-  console.log('button click event');
-  let elapsedTime = e.timestamp - lastClickElapsedTime;
-  if (elapsedTime > 500) {
-    console.log('elapsed time is more than 500ms');
-    lastClickElapsedTime = e.timestamp;
-    return;
-  }
-  console.log('button timestamp : ', e.timeStamp);
-  console.log('button elapsed time : ', elapsedTime);
-});
+btn.addEventListener(
+  'click',
+  (e) => {
+    debugger;
+    console.log('button click event');
+    let elapsedTime = e.timestamp - lastClickElapsedTime;
+    if (elapsedTime > 500) {
+      console.log('elapsed time is more than 500ms');
+      lastClickElapsedTime = e.timestamp;
+      return;
+    }
+    console.log('button timestamp : ', e.timeStamp);
+    console.log('button elapsed time : ', elapsedTime);
+  },
+  { capture: true },
+);
 
 btn.dispatchEvent(docEvent);
