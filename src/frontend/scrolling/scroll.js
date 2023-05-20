@@ -1,11 +1,12 @@
 const scroller = document.querySelector('.scroller');
-const scrollData = document.querySelector('.scroll-top');
-scroller.addEventListener('scroll', (event) => {
-  scrollData.textContent = scroller.scrollTop;
+const scrollTop = document.querySelector('.scroll-top');
+const scrollHeight = document.querySelector('.scroll-height');
+const clientHeight = document.querySelector('.client-height');
 
-  console.log('scroller.scrollTop    : ', scroller.scrollTop);
-  console.log('scroller.scrollHeight : ', scroller.scrollHeight);
-  console.log('scroller.clientHeight : ', scroller.clientHeight);
+scroller.addEventListener('scroll', (event) => {
+  scrollTop.textContent = scroller.scrollTop;
+  scrollHeight.textContent = scroller.scrollHeight;
+  clientHeight.textContent = scroller.clientHeight;
 
   const x = Math.abs(
     scroller.scrollHeight - scroller.clientHeight - scroller.scrollTop,
