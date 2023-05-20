@@ -1,0 +1,25 @@
+main {
+  height: 100vh;
+  width: 100vh;
+}
+
+.output {
+  width: 70%;
+  border: 1px solid black;
+  margin: 1rem auto;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.scroller {
+  width: 70%;
+  height: 70%;
+  overflow-y: scroll;
+  border: 1px solid black;
+  margin: 2rem auto;
+}
+
+.scroller > p {
+  padding: 10px;
+  line-height: 1.5rem;
+}
