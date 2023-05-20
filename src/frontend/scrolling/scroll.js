@@ -19,8 +19,6 @@ scroller.addEventListener('scroll', (event) => {
     scroller.scrollHeight - Math.round(scroller.scrollTop) ===
     scroller.clientHeight;
 
-  // const rr = isTotallyScrolled(scroller);
-  // console.log(rr);
   isScrolled.textContent = isTotallyScrolled(scroller).toString();
 });
 
