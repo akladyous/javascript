@@ -21,21 +21,28 @@ function handleClick(e) {
   console.log('-'.repeat(50));
 }
 
-parent.addEventListener('click', (e) => {
-  console.log('parent');
-});
-one.addEventListener('click', (e) => {
-  console.log('one');
-});
-two.addEventListener('click', (e) => {
-  console.log('two');
-});
-three.addEventListener('click', (e) => {
-  console.log('three');
-});
-four.addEventListener('click', (e) => {
-  console.log('four');
-});
-five.addEventListener('click', (e) => {
-  console.log('five');
-});
+function parentClick(e) {
+  console.log('Parent');
+}
+function oneClick(e) {
+  console.log('One');
+}
+function TwoClick(e) {
+  console.log('Two');
+}
+function ThreeClick(e) {
+  console.log('Three');
+}
+function FourClick(e) {
+  console.log('Four');
+}
+function fiveClick(e) {
+  console.log('Five');
+}
+
+parent.addEventListener('click', parentClick);
+one.addEventListener('click', oneClick);
+two.addEventListener('click', TwoClick);
+three.addEventListener('click', ThreeClick);
+four.addEventListener('click', FourClick);
+five.addEventListener('click', fiveClick);
