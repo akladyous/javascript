@@ -1,12 +1,56 @@
+.root {
+  min-height: 100vh;
+}
 .parent {
-  width: 600px;
-  height: 600px;
+  box-sizing: content-box;
+  width: 650px;
+  height: 650px;
   border: 1px solid black;
   background-color: antiquewhite;
-  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
 }
 
-.one {
+.inner {
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.inner div {
+  width: 80%;
+  height: 80%;
+  transform-origin: center;
+}
+
+.inner.one div {
+  transform: scale(1);
+  background-color: violet;
+}
+.inner.two div {
+  transform: scale(0.9);
+  background-color: green;
+}
+.inner.three div {
+  transform: scale(0.8);
+  background-color: blue;
+}
+.inner.four div {
+  transform: scale(0.7);
+  background-color: cadetblue;
+}
+.inner.five div {
+  transform: scale(0.7);
+  background-color: yellow;
+}
+
+/* --------------- */
+.onex {
   position: absolute;
   width: 80%;
   height: 80%;
@@ -16,7 +60,7 @@
   border: 1px solid black;
   background-color: blanchedalmond;
 }
-.two {
+.twox {
   position: absolute;
   width: 80%;
   height: 80%;
