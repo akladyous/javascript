@@ -23,9 +23,25 @@
   <body>
     <main>
       <div class="output">
-        <p>scroll top &nbsp;<span class="scroll-top"></span></p>
-        <p>scroll height &nbsp;<span class="scroll-height"></span></p>
-        <p>client height &nbsp;<span class="client-height"></span></p>
+        <p class="scrollHeight">
+          scroll height &nbsp;<span class="scroll-height"></span>
+        </p>
+        <p class="scrollTop">
+          scroll top &nbsp;<span class="scroll-top"></span>
+        </p>
+        <p class="clientHeight">
+          client height &nbsp;<span class="client-height"></span>
+        </p>
+        <p>
+          <span class="scrollHeight">scrollHeight</span>
+          -
+          <span class="scrollTop">scrollTop</span> ===
+          <!-- <span class="clientHeight">clientHeight</span> -->
+          &nbsp;
+          <span class="scrollHeightMinusScrollTop"></span>
+        </p>
+        <p class="read"></p>
+        <p class="isScrolled"></p>
       </div>
       <div class="scroller">
         <p>

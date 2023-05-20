@@ -3,12 +3,23 @@ main {
   width: 100vh;
 }
 
+.output .scrollHeight {
+  color: red;
+}
+.output .scrollTop {
+  color: green;
+}
+.output .clientHeight {
+  color: violet;
+}
+
 .output {
   width: 70%;
   border: 1px solid black;
   margin: 1rem auto;
-  text-align: center;
+  text-align: start;
   text-transform: capitalize;
+  padding: 10px;
 }
 
 .scroller {
