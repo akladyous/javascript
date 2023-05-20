@@ -26,8 +26,11 @@
   width: 80%;
   height: 80%;
   transform-origin: center;
+  transition: border 0.3s ease;
 }
-
+.inner div:hover {
+  border: 2px solid #000; /* Black border */
+}
 .inner.one div {
   transform: scale(1);
   background-color: violet;
