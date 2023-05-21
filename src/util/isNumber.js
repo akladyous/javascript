@@ -9,6 +9,7 @@ function isNumber(num) {
   }
   return false;
 }
+
 const test1 = isNumber(5e3); // true
 const test2 = isNumber(Infinity); // false
 console.log(test1, test2);
