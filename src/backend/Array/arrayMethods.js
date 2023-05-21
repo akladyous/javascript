@@ -8,6 +8,17 @@ const ar2 = ['seven', 'eight', 'nine', 'ten'];
 
 let nums = [...Array(5).keys()];
 
+const alphabets = Array.from([...Array(26).keys()], (n) =>
+  String.fromCharCode(n + 65),
+);
+const splitArray = (array = [], cb) => {
+  var midpoint = Math.ceil(array.length / 2);
+  var firstHalf = array.slice(0, midpoint);
+  var secondHalf = array.slice(midpoint);
+
+  return [firstHalf, secondHalf];
+};
+
 const generateEvenNumbers = (length) => {
   const evenNums = [];
   for (let i = 2; i <= length; i += 2) {
@@ -22,14 +33,14 @@ const generateOddNumbers = (length) => {
   }
   return oddNumbers;
 };
+const isEven = (number) => number % 2 === 0;
+const isOdd = (number) => number % 2 !== 0;
 
 const evenNumbers = generateEvenNumbers(10);
 console.log(
   'every : ',
   evenNumbers.every((num) => num % 2 === 0, evenNumbers),
 );
-const isEven = (number) => number % 2 === 0;
-const isOdd = (number) => number % 2 !== 0;
 
 const oddNumbers = generateOddNumbers(20);
 console.log(
@@ -38,3 +49,5 @@ console.log(
 );
 const rangeOfTen = [...Array(10).keys()];
 console.log('some : ', rangeOfTen.some(isEven));
+
+console.log('alphabets : ', alphabets);
