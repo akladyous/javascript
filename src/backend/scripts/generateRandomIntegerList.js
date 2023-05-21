@@ -1,4 +1,4 @@
-const generateRandomIntegerList = (length, min, max) => {
+export const generateRandomIntegerList = (length, min, max) => {
   const randomNumbers = new Array();
 
   for (let i = 0; i < length; i++) {
