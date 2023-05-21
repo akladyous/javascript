@@ -1,3 +1,5 @@
+import { todos } from '../../data/todos';
+
 let oneToFive = ['one', 'two', 'three', 'four', 'five'];
 let sixToTen = ['six', 'seven', 'eight', 'nine', 'ten'];
 let o1 = { one: 1, two: 2, three: 3, four: 4, five: 5 };
@@ -51,3 +53,6 @@ const rangeOfTen = [...Array(10).keys()];
 console.log('some : ', rangeOfTen.some(isEven));
 
 console.log('alphabets : ', alphabets);
+
+const completed = todos.group(({ completed }) => completed);
+console.log('completed : ', completed);
