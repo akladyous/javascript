@@ -1,10 +1,3 @@
-let People = {
-  first: 'boula',
-  last: 'akladyous',
-  f1: function () {
-    return `fullname ${this.first} ${this.last}`;
-  },
-};
 const userInfo = {
   firstName: 'Avi',
   lastName: 'Flombaum',
@@ -82,4 +75,4 @@ function objIter(jsObject) {
   }
 }
 
-// objIter(userInfo);
+objIter(userInfo);
