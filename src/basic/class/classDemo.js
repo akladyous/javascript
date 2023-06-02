@@ -18,7 +18,22 @@ class Student extends Student {
   constructor(courses) {
     super(firstName, lastName);
     this.courses = courses;
-    this._gpa = 0;
+    this._gpa = this.#initialGPA;
+  }
+
+  get gpa() {
+    return this._gpa;
+  }
+
+  #getStudentGPA() {
+    return this._gpa;
+  }
+
+  #setStudentGPA(value) {
+    if (value < 0 && value > 5) {
+      throw new Error('GPA Value Error');
+    }
+    this._gpa = value;
   }
 
   grade() {
