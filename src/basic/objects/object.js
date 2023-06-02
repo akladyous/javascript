@@ -33,7 +33,8 @@ const userInfo = {
   projects: [
     {
       title: 'Flatbook',
-      description: 'The premier Flatiron School-based social network in the world.',
+      description:
+        'The premier Flatiron School-based social network in the world.',
     },
     {
       title: 'Scuber',
@@ -81,4 +82,4 @@ function objIter(jsObject) {
   }
 }
 
-objIter(userInfo);
+// objIter(userInfo);
