@@ -1,6 +1,6 @@
 let people = {
-  firstName: 'boula',
-  lastName: 'akladyous',
+  firstName: 'john',
+  lastName: 'doe',
   f1: function () {
     return `fullname ${this.firstName} ${this.lastName}`;
   },
