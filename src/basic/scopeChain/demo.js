@@ -57,3 +57,9 @@ console.log(num2); // Uncaught ReferenceError: num2 is not defined // ReferenceE
 console.log(num3); // Uncaught ReferenceError: num2 is not defined // ReferenceError: num2 is not defined
 // -----------------------------------------------------------------------
 // -----------------------------------------------------------------------
+if (Math.random() > 0.5) {
+  const num1 = 1;
+} else {
+  const num1 = 2;
+}
+console.log(num1); // ReferenceError: x is not defined
