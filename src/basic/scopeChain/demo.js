@@ -46,14 +46,14 @@ function add() {
   print();
 
   console.log('parent function Scope');
-  console.log(num1); //  Reference error: num1 is not defined
-  console.log(num2); // Reference error: num2 is not defined
-  console.log(num3); // Reference error: num3 is not defined
+  console.log(num1); // Uncaught ReferenceError: num2 is not defined // ReferenceError: num2 is not defined
+  console.log(num2); // Uncaught ReferenceError: num2 is not defined // ReferenceError: num2 is not defined
+  console.log(num3); // Uncaught ReferenceError: num2 is not defined // ReferenceError: num2 is not defined
 }
 console.log('Global Scope');
 console.log(add());
-console.log(num1); //  Reference error: num1 is not defined
-console.log(num2); // Reference error: num2 is not defined
-console.log(num3); // Reference Error: num3 is not defined
+console.log(num1); //  Uncaught ReferenceError: num2 is not defined // ReferenceError: num2 is not defined
+console.log(num2); // Uncaught ReferenceError: num2 is not defined // ReferenceError: num2 is not defined
+console.log(num3); // Uncaught ReferenceError: num2 is not defined // ReferenceError: num2 is not defined
 // -----------------------------------------------------------------------
 // -----------------------------------------------------------------------
