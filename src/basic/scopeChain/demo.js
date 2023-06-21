@@ -31,7 +31,7 @@ function print() {
 console.log(print());
 console.log(num1); // Uncaught ReferenceError: num2 is not defined // ReferenceError: num2 is not defined
 console.log(num2); // Uncaught ReferenceError: num2 is not defined // ReferenceError: num2 is not defined
-console.log(num3); // Reference Error: num3 is not defined
+console.log(num3); // Uncaught ReferenceError: num2 is not defined // ReferenceError: num2 is not defined
 // -----------------------------------------------------------------------
 // -----------------------------------------------------------------------
 // -----------------------------------------------------------------------
