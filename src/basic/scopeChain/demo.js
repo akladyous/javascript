@@ -17,7 +17,8 @@ if (true) {
   const num3 = 30;
 }
 console.log(num1); // prints 10, num1 created in global scope
-console.log(num2); // refernce error: num2 is not defined
-console.log(num3); // refernce Error: num3 is not defined
+console.log(num2); // Uncaught ReferenceError: num2 is not defined // ReferenceError: num2 is not defined
+console.log(num3); // Uncaught ReferenceError: num2 is not defined // ReferenceError: num2 is not defined
 // -----------------------------------------------------------------------
+
 // -----------------------------------------------------------------------
