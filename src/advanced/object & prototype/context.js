@@ -28,16 +28,16 @@ function foo() {
 foo();
 console.log('--------------- execution stack ---------------');
 function a() {
-  console.log('a');
+  console.log('function a');
   b();
-  console.log('a again');
+  console.log('function a -> again <-');
 }
 function b() {
-  console.log('b');
+  console.log('function b');
   c();
-  console.log('b again');
+  console.log('function b -> again <-');
 }
 function c() {
-  console.log('c');
+  console.log('function c');
 }
 a();
