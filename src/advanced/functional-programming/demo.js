@@ -25,6 +25,12 @@ $forEach(num1, (n) => {
   return n * 2;
 });
 
+function myCustomBind(context, fn, ...args) {
+  return function (...innerArgs) {
+    fn.apply(context, args.concat(innerArgs));
+  };
+}
+
 const checkLimitByTwo = checkLimit.bind(null, 2);
 const checkLimitTwoResult = $forEach(num1, checkLimitByTwo);
 console.log(checkLimitTwoResult);
