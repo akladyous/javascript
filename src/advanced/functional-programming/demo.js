@@ -10,20 +10,27 @@ const $forEach = function (arr, fn) {
   }
   return newArray;
 };
-function multiply(a, b) {
-  return a * b;
-}
 
-$forEach(num1, (n) => {
-  console.log('current Number : ', n);
-  return n * 2;
-});
 function checkLimit(limit, item) {
   return item > limit;
 }
-const checkLimitByTwo = checkLimit.bind(null, 2);
 
-const checkLimitResult = $forEach(num1, checkLimitByTwo);
-console.log(checkLimitResult);
+function customBind(fn, context, ...args) {
+  return function (...innerArgs) {
+    return fn.apply(context, args.concat(innerArgs));
+  };
+}
+
+$forEach(num1, (n) => {
+  return n * 2;
+});
+
+const checkLimitByTwo = checkLimit.bind(null, 2);
+const checkLimitTwoResult = $forEach(num1, checkLimitByTwo);
+console.log(checkLimitTwoResult);
+
+const checkLimitByIII = customBind(checkLimit, null, 3);
+const checkLimitByIIIResult = $forEach(num1, checkLimitByIII);
+console.log(checkLimitByIIIResult);
 
 console.groupEnd();
