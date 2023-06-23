@@ -50,6 +50,7 @@ function Admin(role, ...args) {
   this.role = role;
 }
 Admin.prototype = Object.create(User.prototype);
+Admin.prototype.constructor = User;
 const a1 = new Admin('suer admin', 'david', 16);
 console.log('admin 1 : ', a1);
 
