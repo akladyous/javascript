@@ -1,21 +1,34 @@
 // import { todos } from '../data/todos';
 
-let oneToFive = ['one', 'two', 'three', 'four', 'five'];
-let sixToTen = ['six', 'seven', 'eight', 'nine', 'ten'];
-const numWords = oneToFive.concat(sixToTen);
-
-let o1 = { one: 1, two: 2, three: 3, four: 4, five: 5 };
-let o2 = { six: 6, seven: 7, eight: 8, nine: 9, ten: 10 };
-
-const ar1 = ['one', 'two', 'three', 'four', 'five', 'six'];
-const ar2 = ['seven', 'eight', 'nine', 'ten'];
-
-let nums = [...Array(5).keys()];
-
 const alphabets = Array.from([...Array(26).keys()], (n) =>
   String.fromCharCode(n + 65),
 );
 console.log('alphabets : ', alphabets);
+
+let wordsOne = ['one', 'two', 'three', 'four', 'five'];
+let wordsTwo = ['six', 'seven', 'eight', 'nine', 'ten'];
+const numWords = wordsOne.concat(wordsTwo);
+console.log(numWords);
+
+// find -> find `first element` else `undefined`
+let firstElement = numWords.find((w) => w === 'one');
+console.log('find first element else `undefined` : ', firstElement);
+
+//
+let o1 = {
+  one: 1,
+  two: 2,
+  three: 3,
+  four: 4,
+  five: 5,
+  six: 6,
+  seven: 7,
+  eight: 8,
+  nine: 9,
+  ten: 10,
+};
+
+let nums = [...Array(5).keys()];
 
 const splitArray = (array = [], cb) => {
   var midpoint = Math.ceil(array.length / 2);
