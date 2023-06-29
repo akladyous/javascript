@@ -1,12 +1,22 @@
-function product(name, price) {
-  this.name = name;
-  this.price = price;
-}
+// function Animal(name, age) {
+//   this.name = name;
+//   this.age = age;
+// }
 
-function food(name, price) {
-  product.call(this, name, price);
-  this.category = 'food';
-  console.log(this);
-}
+const person = {
+  firstName: 'john',
+  lastName: 'doe',
+  fullName: function () {
+    return `${this.firstName} ${this.lastName}`;
+  },
+};
 
-console.log(new food('cheese', 5).name);
+const user = {
+  email: 'john_doe@gmail.com',
+  password: '123',
+};
+
+user.__proto__ = person;
+// is equivalent to:
+Object.setPrototypeOf(user, person);
+console.log(user.fullName());

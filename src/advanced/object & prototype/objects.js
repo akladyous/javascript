@@ -1,14 +1,20 @@
 console.log('-------------- creating objects --------------');
+/*
+const obj1 = {};
+is exactly the same as
+const obj1 = Object.create(Object.prototype);
+*/
+
 const obj1 = {};
 console.log(
   'const obj1 = {}                           : ',
-  o,
+  obj1,
   ' create an object',
 );
 const obj2 = Object.create(Object.prototype);
 console.log(
   'obj2 = Object.create(Object.prototype)    : ',
-  o,
+  obj2,
   ' is equivalent to ->  const obj1 = {}',
 );
 var v1 = 'v1';
