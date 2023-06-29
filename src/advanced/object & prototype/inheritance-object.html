@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="./index.css" /> -->
+  </head>
+  <style>
+    .code {
+      font-family: 'Consolas', monospace;
+      background-color: #1e1e1e;
+      color: #d4d4d4;
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+    .explanation {
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+    .keyword {
+      color: #569cd6;
+    }
+    .string {
+      color: #ce9178;
+    }
+    .comment {
+      color: #6a9955;
+    }
+  </style>
+  <body>
+    <div>
+      <p>The code demonstrates object inheritance in JavaScript.</p>
+      <p>
+        An object can inherit properties and methods from another object, known
+        as its prototype. In this case, the <code>person</code> object serves as
+        the prototype for the <code>user</code> object.
+      </p>
+      <p>
+        The <code>Object.setPrototypeOf(user, person)</code> statement sets the
+        prototype of <code>user</code> to <code>person</code>. This means that
+        <code>user</code> inherits all properties and methods from
+        <code>person</code>.
+      </p>
+      <p>
+        Accessing <code>user.firstName</code> demonstrates that
+        <code>user</code> can access the property <code>firstName</code> defined
+        in its prototype <code>person</code>.
+      </p>
+      <p>
+        The <code>Object.getPrototypeOf(user)</code> and
+        <code>user.__proto__</code> statements retrieve the prototype of
+        <code>user</code>, which is <code>person</code>.
+      </p>
+      <p>
+        The <code>person.isPrototypeOf(user)</code> statement checks if
+        <code>person</code> is in the prototype chain of <code>user</code>.
+      </p>
+    </div>
+    <div class="code">
+      <pre><code><span class="keyword">const</span> person = {
+  <span class="keyword">firstName</span>: <span class="string">'john'</span>,
+  <span class="keyword">lastName</span>: <span class="string">'doe'</span>,
+};
+
+<span class="keyword">const</span> user = {
+  <span class="keyword">email</span>: <span class="string">'alex@google.com'</span>,
+  <span class="keyword">parent</span>: <span class="keyword">function</span> () {
+    <span class="keyword">console</span>.log(<span class="keyword">this</span>.name);
+  },
+};
+
+<span class="keyword">setPrototypeOf</span>(user, person) <span class="keyword">is equivalent to</span> <span class="keyword">person.__proto__</span>'
+<span class="keyword">Object</span>.setPrototypeOf(user, person);
+
+
+<span class="keyword">user object still has access to</span> <span class="keyword">person.__proto__</span>'
+user.firstName: ', user.firstName
+
+
+<span class="keyword">Access user [[prototype]]</span>'
+<span class="keyword">Object.getPrototypeOf(user)</span>: ', <span class="keyword">Object</span>.getPrototypeOf(user)
+<span class="keyword">the same as</span>:'
+user.__proto__: ', user.__proto__
+
+
+<span class="keyword">Person object becomes the prototype of</span> <span class="keyword">user object</span>'
+person.isPrototypeOf(user): ', person.isPrototypeOf(user)
+</code></pre>
+    </div>
+  </body>
+</html>

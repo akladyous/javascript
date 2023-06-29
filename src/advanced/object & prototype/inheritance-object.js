@@ -1,4 +1,3 @@
-console.log('---------------- OBJECTS ----------------');
 const person = {
   firstName: 'john',
   lastName: 'doe',
@@ -7,7 +6,6 @@ console.log('person object : ', person);
 
 const user = {
   email: 'alex@google.com',
-  age: 20,
   parent: function () {
     console.log(this.name);
   },
@@ -15,9 +13,6 @@ const user = {
 console.log('user object : ', user);
 console.log('');
 
-// if (Object.isExtensible(person)) {
-//   Object.setPrototypeOf(user, person);
-// }
 console.log('setPrototypeOf(user, person) is equivalent to  person.__proto__');
 Object.setPrototypeOf(user, person);
 console.log('');
