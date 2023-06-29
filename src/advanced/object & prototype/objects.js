@@ -1,10 +1,10 @@
 console.log('---------------- OBJECTS ----------------');
-const user = {
+const person = {
   firstName: 'john',
   lastName: 'doe',
 };
 
-const profile = {
+const user = {
   email: 'alex@google.com',
   age: 20,
   parent: function () {
@@ -12,34 +12,40 @@ const profile = {
   },
 };
 
-// if (Object.isExtensible(user)) {
-//   Object.setPrototypeOf(profile, user);
+// if (Object.isExtensible(person)) {
+//   Object.setPrototypeOf(user, person);
 // }
-console.log('setPrototypeOf(user, profile) -> add profile to user.__proto__');
-Object.setPrototypeOf(user, profile);
-console.log('user object  : ', user);
+console.log('setPrototypeOf(person, user) -> add user to person.__proto__');
+Object.setPrototypeOf(person, user);
+console.log('person object  : ', person);
 console.log(
-  'user.email : ',
-  user.email,
-  ' still have access to user.__proto__',
+  'person.email : ',
+  person.email,
+  ' still have access to person.__proto__',
 );
-console.log('getPrototypeOf(user)            : ', Object.getPrototypeOf(user));
-console.log('profile.__proto__)                 : ', profile.__proto__);
-console.log('getPrototypeOf(user)             : ', Object.getPrototypeOf(user));
-console.log('user.__proto__)                  : ', user.__proto__);
-console.log('profile.isPrototypeOf(user)      : ', profile.isPrototypeOf(user));
+console.log(
+  'getPrototypeOf(person)            : ',
+  Object.getPrototypeOf(person),
+);
+console.log('user.__proto__)                 : ', user.__proto__);
+console.log(
+  'getPrototypeOf(person)             : ',
+  Object.getPrototypeOf(person),
+);
+console.log('person.__proto__)                  : ', person.__proto__);
+console.log('user.isPrototypeOf(person)      : ', user.isPrototypeOf(person));
 console.log('-------------- access object property --------------');
-console.log(
-  'getOwnPropertyDescriptors(profile) : ',
-  Object.getOwnPropertyDescriptors(profile),
-);
 console.log(
   'getOwnPropertyDescriptors(user) : ',
   Object.getOwnPropertyDescriptors(user),
 );
 console.log(
-  'getOwnPropertyNames(profile)       : ',
-  Object.getOwnPropertyNames(profile),
+  'getOwnPropertyDescriptors(person) : ',
+  Object.getOwnPropertyDescriptors(person),
+);
+console.log(
+  'getOwnPropertyNames(user)       : ',
+  Object.getOwnPropertyNames(user),
 );
 console.log('-----------------------------------');
 const o = Object.create(null);
