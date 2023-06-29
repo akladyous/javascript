@@ -1,34 +1,9 @@
-console.log('-------------- creating objects --------------');
-/*
-const obj1 = {};
-is exactly the same as
-const obj1 = Object.create(Object.prototype);
-*/
-
-const obj1 = {};
-console.log(
-  'const obj1 = {}                           : ',
-  obj1,
-  ' create an object',
-);
-const obj2 = Object.create(Object.prototype);
-console.log(
-  'obj2 = Object.create(Object.prototype)    : ',
-  obj2,
-  ' is equivalent to ->  const obj1 = {}',
-);
-var v1 = 'v1';
-const o1 = {
-  v1: v1,
-  property() {
-    console.log('hello');
-  },
-};
 console.log('---------------- OBJECTS ----------------');
 const user = {
   firstName: 'john',
   lastName: 'doe',
 };
+
 const profile = {
   email: 'alex@google.com',
   age: 20,
@@ -74,5 +49,3 @@ console.log(
   ' create an object null as prototype',
 );
 console.log('-----------------------------------');
-
-console.log('prototypeOf o1 : ', Object.getPrototypeOf(o1));
