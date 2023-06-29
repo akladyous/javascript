@@ -6,9 +6,13 @@ Object.defineProperty(o, 'p', {
   configurable: true,
   enumerable: true,
 });
-o.p = 10;
-console.log(o.p);
-console.log(Object.getOwnPropertyDescriptor(o, 'p'));
+try {
+  o.p = 10;
+  console.log(o.p);
+  console.log(Object.getOwnPropertyDescriptor(o, 'p'));
+} catch (error) {
+  console.log(error.message);
+}
 
 // Object.defineProperty(
 var product = { v: 10 };
