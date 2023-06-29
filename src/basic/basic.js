@@ -16,9 +16,9 @@ console.log('int instanceof Number : ', int instanceof Number);
 console.log('int instanceof Object : ', int instanceof Object);
 
 console.log('-'.repeat(50));
-var intObject = new Number(123);
-console.log('typeof intObject : ', typeof intObject);
-console.log('intObject instanceof Number : ', intObject instanceof Number);
-console.log('intObject instanceof Object : ', intObject instanceof Object);
-console.log(intObject);
-console.log(intObject.valueOf());
+var numberObj = new Number(123);
+console.log('typeof numberObj : ', typeof numberObj);
+console.log('numberObj instanceof Number : ', numberObj instanceof Number);
+console.log('numberObj instanceof Object : ', numberObj instanceof Object);
+console.log(numberObj);
+console.log(numberObj.valueOf());

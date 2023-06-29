@@ -29,9 +29,22 @@ let words = [
 ];
 let nums = [...Array(10).keys()];
 
+const random = (min, max, length) => {
+  const numList = [];
+  for (let i = 0; i < length; i++) {
+    numList.push(Math.floor(Math.random() * (max - min + 1)));
+  }
+  return numList;
+};
+var randInt = random(1, 100, 10);
+console.log('random list : ', randInt);
+
 // find -> find `first element` else `undefined`
-let firstElement = numWords.find((w) => w === 'one');
-console.log('find first element else `undefined` : ', firstElement);
+let firstElement = words.find((w) => w === 'one');
+console.log('return first element else `undefined` : ', firstElement);
+
+let findIndex = words.findIndex((w) => w === 'five');
+console.log('return `First Index` of element else `-1` : ', findIndex);
 
 const splitArray = (array = [], cb) => {
   var midpoint = Math.ceil(array.length / 2);
@@ -72,7 +85,7 @@ console.log(
 const rangeOfTen = [...Array(10).keys()];
 console.log('some : ', rangeOfTen.some(isEven));
 
-console.log('indexOf : ', numWords.indexOf('ten'));
+console.log('indexOf : ', words.indexOf('ten'));
 console.log('-'.repeat(50));
 
 console.log('Sparse Array');
