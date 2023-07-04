@@ -1,8 +1,0 @@
-function isNumerc(...args) {
-    debugger
-    let ar1 = [];
-    this.forEach(v=> /^-?\d+$/.test(v))
-    // return /^-?\d+$/.test(this)
-};
-
-isNumerc.apply([1,2,3])
